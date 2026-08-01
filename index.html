@@ -3,285 +3,251 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MANU CECÍLIA - Lash Designer</title>
+<title>Manu Cecília Lash Designer</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-background:#f7f1fb;
-color:#5a3d6b;
-}
-
-header{
-background:linear-gradient(135deg,#c98cff,#ffffff);
-padding:40px 20px;
-text-align:center;
-}
-
-header h1{
-font-size:32px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:18px;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-padding:25px;
-}
-
-.card{
-background:#fff;
-padding:25px;
-margin-bottom:30px;
-border-radius:18px;
-box-shadow:0 8px 20px rgba(0,0,0,.1);
-}
-
-.btn{
-display:block;
-width:100%;
-padding:15px;
-margin-top:15px;
-text-align:center;
-background:#b86cff;
-color:white;
-text-decoration:none;
-border:none;
-border-radius:10px;
-font-size:18px;
-cursor:pointer;
-}
-
-.btn:hover{
-background:#9d46ef;
-}
-
-input,textarea,select{
-width:100%;
-padding:12px;
-margin-top:8px;
-margin-bottom:18px;
-border-radius:10px;
-border:1px solid #ccc;
-font-size:16px;
-}
-
-label{
-font-weight:bold;
-}
-
-.servicos label{
-display:block;
-font-weight:normal;
-margin-bottom:8px;
-}
-
-.frase{
-text-align:center;
-font-size:22px;
-margin-top:25px;
-font-style:italic;
-color:#8749c9;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f3e8ff;color:#2e1065}
+.pagina{display:none;min-height:100vh;padding:28px 18px}
+.ativa{display:block}
+.container{max-width:540px;margin:auto}
+h1,h2{font-family:Georgia,serif;color:#7e22ce;text-align:center}
+h1{font-size:38px;margin-top:25px;text-shadow:0 0 8px #d8b4fe}
+h2{font-size:26px;margin-bottom:20px}
+.sub{text-align:center;color:#581c87;margin:10px 0;line-height:1.5}
+.frase-impacto{font-style:italic;font-weight:bold;color:#6b21a8;margin-top:15px;text-align:center}
+.card{background:#fff;border:1px solid #c084fc;border-radius:26px;padding:22px;margin:18px 0;box-shadow:0 0 25px rgba(126,34,206,.15)}
+.btn{width:100%;display:block;text-align:center;margin-top:14px;padding:16px;border-radius:30px;border:none;background:linear-gradient(135deg,#a855f7,#7e22ce);color:#fff;font-weight:bold;text-decoration:none;font-size:16px;cursor:pointer;box-shadow:0 6px 14px rgba(126,34,206,.25);transition:transform 0.2s}
+.btn:active{transform:scale(0.98)}
+.btn2{background:#fff;color:#7e22ce;border:1px solid #7e22ce}
+.servicos{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:15px}
+.servico{background:#fff;border:1px solid #d8b4fe;border-radius:18px;padding:15px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;transition:all 0.2s}
+.servico.ativo{border-color:#7e22ce;background:#f3e8ff;transform:scale(1.01);box-shadow:0 2px 8px rgba(126,34,206,.2)}
+.servico strong{color:#6b21a8}
+.valor{background:#e9d5ff;color:#3b0764;padding:7px 12px;border-radius:20px;font-weight:bold}
+input,select,textarea{width:100%;padding:14px;margin-top:6px;margin-bottom:14px;border-radius:14px;border:1px solid #d8b4fe;background:#fff;color:#2e1065;font-size:15px}
+input:focus,select:focus,textarea:focus{outline:2px solid #a855f7}
+label{color:#7e22ce;font-size:14px;font-weight:bold}
+textarea{height:85px;resize:none}
+.progresso{display:flex;justify-content:center;gap:8px;margin:20px 0}
+.bola{width:32px;height:32px;border-radius:50%;border:1px solid #7e22ce;display:flex;align-items:center;justify-content:center;color:#7e22ce;font-weight:bold}
+.bola.on{background:#7e22ce;color:#fff}
+.check{width:100px;height:100px;border-radius:50%;border:2px solid #7e22ce;margin:30px auto 20px;display:flex;align-items:center;justify-content:center;font-size:50px;color:#7e22ce;background:#fff}
+.info{text-align:center;color:#6b21a8;font-size:13px;margin-top:12px;line-height:1.5}
+.aviso-domingo{color:#dc2626;font-size:12px;display:none;margin-top:-10px;margin-bottom:10px;font-weight:bold}
+footer{text-align:center;color:#7e22ce;padding:25px;font-size:13px}
 </style>
-
 </head>
+
 <body>
 
-<header>
+<!-- PÁGINA 1 -->
+<section id="pagina1" class="pagina ativa">
+  <div class="container">
+    <h1>Manu Cecília</h1>
+    <p class="sub">Lash Designer</p>
 
-<h1>MANU CECÍLIA</h1>
+    <div class="card">
+      <p class="sub">✨ Realce seu olhar com a melhor extensão de cílios da região.</p>
+      <p class="frase-impacto">“Cuide de você, você em primeiro lugar!”</p>
 
-<p>LASH DESIGNER</p>
+      <button class="btn" onclick="irPagina(2)">Agendamento</button>
 
-</header>
+      <a class="btn btn2" href="https://wa.me/5511951136640" target="_blank">
+        WhatsApp
+      </a>
 
-<div class="container">
+      <a class="btn btn2" href="https://www.instagram.com/logodacriativa" target="_blank">
+        Instagram
+      </a>
 
-<div class="card">
+      <a class="btn btn2" href="https://maps.google.com/?q=Cristo+Redentor+Rio+de+Janeiro" target="_blank">
+        📍 Localização
+      </a>
+    </div>
+  </div>
+</section>
 
-<h2>Bem-vinda 💜</h2>
+<!-- PÁGINA 2 -->
+<section id="pagina2" class="pagina">
+  <div class="container">
 
-<a class="btn" href="#agenda">📅 Agendar Horário</a>
+    <div class="progresso">
+      <div class="bola on">1</div>
+      <div class="bola on">2</div>
+      <div class="bola">3</div>
+    </div>
 
-<a class="btn" target="_blank" href="https://wa.me/5511951136640">
-WhatsApp
-</a>
+    <h2>Selecione os Serviços</h2>
+    <p class="info" style="margin-top:-10px; margin-bottom:15px;">Você pode selecionar mais de um serviço!</p>
 
-<a class="btn" target="_blank" href="https://instagram.com/logodacriativa">
-Instagram
-</a>
+    <div class="servicos">
+      <div class="servico" onclick="toggleServico(this, 'Volume Fox', 110)"><strong>Volume Fox</strong><span class="valor">R$ 110,00</span></div>
+      <div class="servico" onclick="toggleServico(this, 'Volume Russo', 100)"><strong>Volume Russo</strong><span class="valor">R$ 100,00</span></div>
+      <div class="servico" onclick="toggleServico(this, 'Volume Brasileiro', 200)"><strong>Volume Brasileiro</strong><span class="valor">R$ 200,00</span></div>
+      <div class="servico" onclick="toggleServico(this, 'Volume 3D', 59)"><strong>Volume 3D</strong><span class="valor">R$ 59,00</span></div>
+      <div class="servico" onclick="toggleServico(this, 'Manutenção Fox', 90)"><strong>Manutenção Fox</strong><span class="valor">R$ 90,00</span></div>
+      <div class="servico" onclick="toggleServico(this, 'Manutenção Russo', 80)"><strong>Manutenção Russo</strong><span class="valor">R$ 80,00</span></div>
+      <div class="servico" onclick="toggleServico(this, 'Manutenção Brasileiro', 100)"><strong>Manutenção Brasileiro</strong><span class="valor">R$ 100,00</span></div>
+      <div class="servico" onclick="toggleServico(this, 'Manutenção 3D', 30)"><strong>Manutenção 3D</strong><span class="valor">R$ 30,00</span></div>
+    </div>
 
-<a class="btn" target="_blank" href="https://maps.google.com/?q=Cristo+Redentor+Rio+de+Janeiro">
-📍 Localização
-</a>
+    <div class="card">
+      <label>Nome da Cliente</label>
+      <input id="nome" type="text" placeholder="Digite seu nome completo">
 
-<div class="frase">
+      <label>WhatsApp</label>
+      <input id="telefone" type="tel" placeholder="(11) 99999-9999">
 
-"Cuide de você, você em primeiro lugar!"
+      <label>Data Desejada</label>
+      <input id="data" type="date" onchange="verificarDomingo(this)">
+      <p id="avisoDomingo" class="aviso-domingo">Não atendemos aos domingos. Por favor, escolha outro dia!</p>
 
-</div>
+      <label>Horário Desejado</label>
+      <select id="horario">
+        <option value="">Selecione um horário</option>
+        <option>09:00</option><option>09:30</option>
+        <option>10:00</option><option>10:30</option>
+        <option>11:00</option><option>11:30</option>
+        <option>12:00</option><option>12:30</option>
+        <option>13:00</option><option>13:30</option>
+        <option>14:00</option><option>14:30</option>
+        <option>15:00</option><option>15:30</option>
+        <option>16:00</option><option>16:30</option>
+        <option>17:00</option><option>17:30</option>
+        <option>18:00</option><option>18:30</option>
+        <option>19:00</option><option>19:30</option>
+      </select>
 
-</div>
+      <label>Observações</label>
+      <textarea id="obs" placeholder="Ex: preferências, se possui alergias, etc..."></textarea>
 
-<div class="card" id="agenda">
+      <button class="btn" onclick="validar()">Confirmar Agendamento</button>
+      <button class="btn btn2" onclick="irPagina(1)">Voltar</button>
+    </div>
+  </div>
+</section>
 
-<h2>Agendamento</h2>
+<!-- PÁGINA 3 -->
+<section id="pagina3" class="pagina">
+  <div class="container">
 
-<label>Nome da Cliente</label>
-<input id="nome">
+    <div class="progresso">
+      <div class="bola on">1</div>
+      <div class="bola on">2</div>
+      <div class="bola on">3</div>
+    </div>
 
-<label>WhatsApp</label>
-<input id="telefone">
+    <div class="check">✓</div>
 
-<label>Data</label>
-<input type="date" id="data">
+    <h2>Tudo pronto!</h2>
+    <p class="sub">Clique no botão abaixo para enviar sua solicitação de agendamento via WhatsApp.</p>
 
-<label>Horário</label>
+    <div class="card">
+      <button class="btn" onclick="enviarWhatsApp()">Enviar no WhatsApp</button>
+      <button class="btn btn2" onclick="irPagina(2)">Editar dados</button>
+    </div>
+  </div>
+</section>
 
-<select id="horario">
-
-<option>09:00</option>
-<option>09:30</option>
-<option>10:00</option>
-<option>10:30</option>
-<option>11:00</option>
-<option>11:30</option>
-<option>12:00</option>
-<option>12:30</option>
-<option>13:00</option>
-<option>13:30</option>
-<option>14:00</option>
-<option>14:30</option>
-<option>15:00</option>
-<option>15:30</option>
-<option>16:00</option>
-<option>16:30</option>
-<option>17:00</option>
-<option>17:30</option>
-<option>18:00</option>
-<option>18:30</option>
-<option>19:00</option>
-<option>19:30</option>
-
-</select>
-
-<label>Serviços (pode selecionar mais de um)</label>
-
-<div class="servicos">
-
-<label><input type="checkbox" value="Volume Fox - R$110"> Volume Fox — R$110</label>
-
-<label><input type="checkbox" value="Volume Russo - R$100"> Volume Russo — R$100</label>
-
-<label><input type="checkbox" value="Volume Brasileiro - R$200"> Volume Brasileiro — R$200</label>
-
-<label><input type="checkbox" value="Volume 3D - R$59"> Volume 3D — R$59</label>
-
-<label><input type="checkbox" value="Manutenção Fox - R$90"> Manutenção Fox — R$90</label>
-
-<label><input type="checkbox" value="Manutenção Russo - R$80"> Manutenção Russo — R$80</label>
-
-<label><input type="checkbox" value="Manutenção Brasileiro - R$100"> Manutenção Brasileiro — R$100</label>
-
-<label><input type="checkbox" value="Manutenção 3D - R$30"> Manutenção 3D — R$30</label>
-
-</div>
-
-<label>Observações</label>
-
-<textarea id="obs" rows="4"></textarea>
-
-<button class="btn" onclick="enviar()">
-
-Confirmar Agendamento
-
-</button>
-
-</div>
-
-</div>
+<footer>
+  © 2026 Manu Cecília Lash Designer<br>
+  Todos os direitos reservados.
+</footer>
 
 <script>
+let servicosSelecionados = [];
 
-const data=document.getElementById("data");
-
-data.addEventListener("change",function(){
-
-let dia=new Date(this.value+"T00:00");
-
-if(dia.getDay()==0){
-
-alert("Domingo não há atendimento. Escolha outra data.");
-
-this.value="";
-
+function irPagina(n){
+  document.querySelectorAll(".pagina").forEach(p=>p.classList.remove("ativa"));
+  document.getElementById("pagina"+n).classList.add("ativa");
+  window.scrollTo(0,0);
 }
 
-});
-
-function enviar(){
-
-let nome=document.getElementById("nome").value;
-
-let telefone=document.getElementById("telefone").value;
-
-let data=document.getElementById("data").value;
-
-let horario=document.getElementById("horario").value;
-
-let obs=document.getElementById("obs").value;
-
-let lista=[];
-
-document.querySelectorAll("input[type=checkbox]:checked").forEach(item=>{
-
-lista.push(item.value);
-
-});
-
-if(nome==""||telefone==""||data==""){
-
-alert("Preencha todos os campos.");
-
-return;
-
+function toggleServico(card, nome, valor){
+  const index = servicosSelecionados.findIndex(s => s.nome === nome);
+  
+  if (index > -1) {
+    servicosSelecionados.splice(index, 1);
+    card.classList.remove("ativo");
+  } else {
+    servicosSelecionados.push({nome, valor});
+    card.classList.add("ativo");
+  }
 }
 
-let mensagem=
+function verificarDomingo(inputData) {
+  if (!inputData.value) return;
+  
+  const dataSelecionada = new Date(inputData.value + 'T00:00:00');
+  const diaSemana = dataSelecionada.getDay();
+  const aviso = document.getElementById("avisoDomingo");
 
-`🌸 *NOVO AGENDAMENTO* 🌸
-
-👩 Cliente: ${nome}
-
-📱 WhatsApp: ${telefone}
-
-📅 Data: ${data}
-
-🕒 Horário: ${horario}
-
-💖 Serviços:
-${lista.join("\n")}
-
-📝 Observações:
-${obs}
-
-Aguardo confirmação do meu agendamento. 💜`;
-
-window.open("https://wa.me/5511951136640?text="+encodeURIComponent(mensagem));
-
+  if (diaSemana === 0) { // 0 = Domingo
+    aviso.style.display = "block";
+    inputData.value = "";
+  } else {
+    aviso.style.display = "none";
+  }
 }
 
+function validar(){
+  const nome = document.getElementById("nome").value;
+  const telefone = document.getElementById("telefone").value;
+  const data = document.getElementById("data").value;
+  const horario = document.getElementById("horario").value;
+
+  if(servicosSelecionados.length === 0){
+    alert("Por favor, selecione pelo menos um serviço.");
+    return;
+  }
+
+  if(!nome || !telefone || !data || !horario){
+    alert("Preencha todos os campos obrigatórios (Nome, WhatsApp, Data e Horário).");
+    return;
+  }
+
+  irPagina(3);
+}
+
+function enviarWhatsApp(){
+  const nome = document.getElementById("nome").value;
+  const telefone = document.getElementById("telefone").value;
+  const data = document.getElementById("data").value;
+  const horario = document.getElementById("horario").value;
+  const obs = document.getElementById("obs").value;
+
+  // Formatação da data para o formato brasileiro (DD/MM/AAAA)
+  const partesData = data.split("-");
+  const dataFormatada = `${partesData[2]}/${partesData[1]}/${partesData[0]}`;
+
+  let listaServicos = "";
+  let valorTotal = 0;
+
+  servicosSelecionados.forEach(s => {
+    listaServicos += `- ${s.nome} (R$ ${s.valor},00)%0A`;
+    valorTotal += s.valor;
+  });
+
+  const numeroWhatsApp = "5511951136640";
+
+  let mensagem = 
+  `Olá, Manu! Gostaria de agendar um horário:%0A%0A`+
+  `👤 *Cliente:* ${nome}%0A`+
+  `📱 *WhatsApp:* ${telefone}%0A%0A`+
+  `✨ *Serviço(s) Selecionado(s):*%0A${listaServicos}%0A`+
+  `💰 *Valor Total Estimado:* R$ ${valorTotal},00%0A%0A`+
+  `📅 *Data desejada:* ${dataFormatada}%0A`+
+  `⏰ *Horário desejado:* ${horario}%0A`;
+
+  if(obs.trim() !== ""){
+    mensagem += `%0A📝 *Observações:* ${obs}%0A`;
+  }
+
+  mensagem += `%0AAguardo sua confirmação!`;
+
+  window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagem}`, "_blank");
+}
 </script>
 
 </body>
