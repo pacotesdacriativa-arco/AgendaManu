@@ -35,7 +35,6 @@ textarea{height:85px;resize:none}
 .check{width:100px;height:100px;border-radius:50%;border:2px solid #7e22ce;margin:30px auto 20px;display:flex;align-items:center;justify-content:center;font-size:50px;color:#7e22ce;background:#fff}
 .info{text-align:center;color:#6b21a8;font-size:13px;margin-top:12px;line-height:1.5}
 .aviso-domingo{color:#dc2626;font-size:12px;display:none;margin-top:-10px;margin-bottom:10px;font-weight:bold}
-footer{text-align:center;color:#7e22ce;padding:25px;font-size:13px}
 </style>
 </head>
 
@@ -150,11 +149,6 @@ footer{text-align:center;color:#7e22ce;padding:25px;font-size:13px}
   </div>
 </section>
 
-<footer>
-  © 2026 Manu Cecília Lash Designer<br>
-  Todos os direitos reservados.
-</footer>
-
 <script>
 let servicosSelecionados = [];
 
@@ -217,7 +211,6 @@ function enviarWhatsApp(){
   const horario = document.getElementById("horario").value;
   const obs = document.getElementById("obs").value;
 
-  // Formatação da data para o formato brasileiro (DD/MM/AAAA)
   const partesData = data.split("-");
   const dataFormatada = `${partesData[2]}/${partesData[1]}/${partesData[0]}`;
 
